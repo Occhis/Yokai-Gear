@@ -1,0 +1,186 @@
+/* RESET Y BASE */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: "Libre Baskerville", serif;
+  color: #333;
+  background-color: #f8f8f8;
+  margin: 0;
+  background: linear-gradient(90deg, #A6E9E9 0%,#4C6650 100%);
+}
+
+/* HEADER Y NAV */
+header {
+  background: linear-gradient(90deg, #A6E9E9 0%,#4C6650 100%);
+}
+
+header .navbar-nav .nav-link {
+  color: #2F3E34; 
+  font-weight: 800; 
+  font-size:  1.2rem;
+}
+
+header .dropdown-menu {
+  background-color: #a6e9e9;
+}
+header .dropdown-menu a:hover {
+  background-color: #4B6F44;
+}
+/* NAVBAR */
+.logo-navbar {
+  width: 120px; 
+  height: 130px;
+  margin-top: -30px;
+  margin-bottom: -30px;
+  object-fit: contain;
+}
+.btn-outline-success {
+  background: linear-gradient(90deg, #4B6F44 0%, #96DCD0 100%);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-outline-success:hover, .btn-search:focus {
+  background: linear-gradient(90deg, #39a0a6 0%, #4B6F44 100%);
+  color: #eaffea;
+}
+
+/* TITULOS */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 800;
+  color: #2F3E34;
+}
+
+h1 {
+  text-align: center;
+  color: #2F3E34;
+}
+
+h2 {
+  text-align: center;
+  color: #4E5D6C;
+}
+
+/* SECCIONES Y ARTICULOS */
+section {
+  text-align: center;
+}
+
+article {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+  background-color: white;
+  padding: 10px;
+  vertical-align: top;
+}
+section article img {
+  width: 320px;
+  height: 320px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+article:hover {
+  background-color: #33333344;
+}
+
+article a {
+  text-decoration: none;
+}
+
+
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background: linear-gradient(135deg,#96DCD0 50%, #4C6650 100%);
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 40px; 
+  line-height: 20px;
+}
+
+.footer-item {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+
+.footer-item a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-item a:hover {
+  text-decoration: underline;
+  color: #0875e9;
+}
+
+.footer-logo {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-list li {
+  display: inline-block;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+
+.footer-list li a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-list li a:hover {
+  color: #0077cc;
+}
+
+/* FORMULARIOS */
+.contact-form {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1500px;
+  width: 90%;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 150px;
+}
+
