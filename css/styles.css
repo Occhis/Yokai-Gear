@@ -18,6 +18,7 @@ body {
 /* HEADER Y NAV */
 header {
   background: linear-gradient(90deg, #A6E9E9 0%,#4C6650 100%);
+  box-shadow: 0  3px #0002;
 }
 
 header .navbar-nav .nav-link {
@@ -102,6 +103,57 @@ article a {
   text-decoration: none;
 }
 
+/* Productos */
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 1.5rem 1rem;
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.product-card img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card button {
+  margin-top: auto;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.product-card button:hover {
+  background: #444;
+}
 
 
 /* FOOTER */
@@ -111,11 +163,11 @@ footer {
   text-align: center;
   padding: 10px;
   font-size: 14px;
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
-  height: 40px; 
-  line-height: 20px;
+  z-index: 100;
+  box-shadow: 0 -2px 8px #0002;
 }
 
 .footer-item {
@@ -184,3 +236,14 @@ textarea {
   height: 150px;
 }
 
+/* Medias Queries */
+@media (max-width: 900px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+}
