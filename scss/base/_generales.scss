@@ -1,0 +1,28 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: $font-main;
+  color: #333;
+  background: $gradient-header;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  font-weight: 800;
+  color: $color-dark;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  color: #4E5D6C;
+}

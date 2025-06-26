@@ -1,0 +1,43 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  padding-bottom: 80px;
+
+  details {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1.2rem 1.5rem;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+
+    summary {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #2F3E34;
+      outline: none;
+      cursor: pointer;
+      margin-bottom: 0.5rem;
+      transition: color 0.2s;
+      list-style: none;
+    }
+
+    &[open] {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+
+      summary {
+        color: #39a0a6;
+      }
+    }
+
+    p {
+      margin: 0;
+      color: #333;
+      font-size: 1rem;
+    }
+  }
+}

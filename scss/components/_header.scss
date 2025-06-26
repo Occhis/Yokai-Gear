@@ -1,0 +1,77 @@
+header {
+  .navbar {
+    &-brand {
+      .logo-navbar {
+        width: 120px;
+        height: 130px;
+        margin-top: -30px;
+        margin-bottom: -30px;
+        object-fit: contain;
+      }
+    }
+
+    &-toggler {
+      border: none;
+      background: transparent;
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px $color-primary;
+      }
+      .navbar-toggler-icon {
+        // Personaliza el icono si lo deseas
+      }
+    }
+
+    &-nav {
+      .nav-item {
+        .nav-link {
+          color: $text-dark;
+          font-weight: 800;
+          font-size: 1.2rem;
+          transition: color 0.2s;
+          &:hover,
+          &.active {
+            color: $color-primary;
+          }
+        }
+        &.dropdown {
+          .dropdown-toggle {
+            cursor: pointer;
+          }
+          .dropdown-menu {
+            background-color: $color-primary;
+            .dropdown-item {
+              color: $text-dark;
+              &:hover {
+                background: $color-secondary;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .form-control {
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .btn-outline-success {
+    background: linear-gradient(90deg, #4B6F44 0%, #96DCD0 100%);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    box-shadow: 0 2px 8px #0002;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover,
+    &.btn-search:focus {
+      background: linear-gradient(90deg, #39a0a6 0%, #4B6F44 100%);
+      color: #eaffea;
+    }
+  }
+}

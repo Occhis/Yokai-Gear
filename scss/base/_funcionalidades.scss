@@ -1,0 +1,46 @@
+//*? VARIABLES
+$font-main: 'Libre Baskerville', serif;
+$font-title: 'Cormorant Garamond', serif;
+$color-primary: #A6E9E9;
+$color-secondary: #4C6650;
+$color-dark: #2F3E34;
+$color-bg: #f8f8f8;
+$color-light: #ffffff;
+$shadow: 0 2px 8px rgba(0,0,0,0.08);
+$gradient-header: linear-gradient(90deg, $color-primary 0%, $color-secondary 100%);
+$gradient-btn: linear-gradient(90deg, #4B6F44 0%, #96DCD0 100%);
+$background-gradient: linear-gradient(135deg, #4B6F44 0%, #96DCD0 100%);
+$text-dark: #333333;
+
+@mixin transition($props...) {
+  transition: $props;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 600px) { @content; }
+  } @else if $breakpoint == medium {
+    @media (max-width: 900px) { @content; }
+  }
+}
+
+@mixin card-style {
+  background-color: $color-light;
+  border-radius: 12px;
+  box-shadow: $shadow;
+  transition: transform 0.2s;
+}
+.carousel-desktop {
+  display: block;
+
+  @include responsive(small) {
+    display: none !important;
+  }
+}
+.carousel-mobile {
+  display: none;
+
+  @include responsive(small) {
+    display: block !important;
+  }
+}
