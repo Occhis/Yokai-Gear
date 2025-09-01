@@ -1,97 +1,124 @@
-section {
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-article {
-  @include card-style;
-  text-align: center;
-  margin: 10px;
-  padding: 10px;
-
-  &:hover {
-    background-color: #33333344;
-    transform: translateY(-4px) scale(1.03);
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  img {
-    width: 320px;
-    height: 320px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-  }
-}
-
-.productos-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+// Contenedor para las tarjetas del index
+.tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
   gap: 2rem;
-  margin: 2rem 0;
-  padding-bottom: 60px;
 }
 
+// Estilo para el contenedor del grid (usado en productos.html)
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Estilo base para las tarjetas de producto (ambas páginas)
 .product-card {
-  @include card-style;
+  background-color: $card-background;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: $light-text;
+  height: 100%;
+  
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1.5rem 1rem;
+  justify-content: space-between;
 
+  // Estilos específicos para la página de productos (con animación)
+  .product-grid & {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  // Estilos de hover y enlace para ambas páginas
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  // Estilos para la imagen
   img {
     width: 100%;
-    max-width: 180px;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+    height: 280px;
+    object-fit: contain;
+    padding: 15px;
+    display: block;
+    border-radius: 8px 8px 0 0;
   }
 
+  // Estilos para el título
   h3 {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin: 15px;
+    color: $primary-color;
+    text-transform: uppercase;
+    text-decoration: none;
+    flex-grow: 1;
   }
 
+  // Estilos para el precio
+  span {
+    display: block;
+    font-weight: bold;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    padding: 0 15px;
+  }
+
+  // Estilos para el botón
   button {
-    margin-top: auto;
-    background: #222;
-    color: #fff;
+    background-color: $primary-color;
+    color: $dark-background;
     border: none;
-    border-radius: 6px;
-    padding: 0.5rem 1.2rem;
+    padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
-    @include transition(background 0.2s);
-
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: auto;
+    
     &:hover {
-      background: #444;
+      background-color: $button-hover;
     }
   }
 }
-
-section.tarjetas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  justify-items: center;
-  padding: 2rem 0 60px 0;
-
-  article {
-    @include card-style;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 320px;
-    margin: 0;
-    padding: 20px 10px;
-
-    img {
-      width: 100%;
-      max-width: 220px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-  }
+/* estilos.css */
+.about-quote {
+  background: rgba(30, 30, 30, 0.85);
+  border-left: 4px solid #A6E9E9;
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  color: #A6E9E9;
+}
+.about-quote .blockquote-footer {
+  color: #e0e0e0;
+  margin-top: 1rem;
+} 
+.nombre-marca {
+  color: #A6E9E9;
+  font-weight: bold;
+  font-size: 1.25em;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 8px #222;
 }

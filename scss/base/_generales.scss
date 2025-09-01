@@ -9,20 +9,38 @@ body {
   min-height: 100vh;
   position: relative;
   font-family: $font-main;
-  color: #333;
-  background: $gradient-header;
+  background-color: $dark-background;
+  color: $light-text;
+  display: flex; // Agregamos Flexbox
+  flex-direction: column; // Acomodamos los elementos en columna
+}
+
+main {
+  flex-grow: 1; // Hacemos que el main ocupe todo el espacio disponible
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
   font-weight: 800;
-  color: $color-dark;
+  // Nuevo color de acento
+  color: $primary-color;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 h1, h2 {
   text-align: center;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 h2 {
+  // Se mantiene el color original del H2 si lo prefieres
   color: #4E5D6C;
+}
+
+p, li {
+  font-family: $font-main;
+  color: $muted-text;
+  line-height: 1.6;
 }

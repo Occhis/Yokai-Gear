@@ -1,0 +1,136 @@
+// scss/components/_cart.scss
+
+.offcanvas {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #333;
+    
+    .offcanvas-title {
+        color: #A6E9E9;
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    
+    .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%); // Hace el icono blanco
+    }
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart-items-container {
+    overflow-y: auto;
+    padding-right: 15px;
+    max-height: calc(100vh - 200px);
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 1px solid #444;
+    }
+
+    .info-item {
+        flex-grow: 1;
+        padding-left: 15px;
+
+        h6 {
+            font-size: 1rem;
+            margin: 0;
+            color: #A6E9E9;
+        }
+
+        p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #c0c0c0;
+        }
+
+        .fw-bold {
+            color: #e0e0e0;
+        }
+    }
+
+    .remove-item {
+        background-color: transparent;
+        border: 1px solid #ff4d4d;
+        color: #ff4d4d;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s, color 0.3s;
+        
+        &:hover {
+            background-color: #ff4d4d;
+            color: #fff;
+        }
+    }
+}
+
+.empty-cart-message {
+    text-align: center;
+    color: #c0c0c0;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.cart-total {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #333;
+
+    h5 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// Estilos del contador de productos en el botón
+.cart-count.badge {
+    background-color: #A6E9E9 !important;
+    color: #121212 !important;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.btn-success {
+    background-color: #A6E9E9 !important;
+    border-color: #A6E9E9 !important;
+    color: #121212 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    
+    &:hover {
+        background-color: darken(#A6E9E9, 10%) !important;
+        border-color: darken(#A6E9E9, 10%) !important;
+    }
+}

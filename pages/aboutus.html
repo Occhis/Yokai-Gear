@@ -61,23 +61,38 @@
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
             <button class="btn btn-outline-success" type="submit">Buscar</button>
           </form>
+          <button class="btn btn-primary ms-2 position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+            Carrito
+            <span class="cart-count badge position-absolute top-0 start-100 translate-middle">0</span>
+          </button>
         </div>
       </div>
     </nav>
   </header>
   <!-- Sección About Us -->
   <main>
-  <section class="about-section">
-    <h1>About Us</h1>
-    <p>
-      Bienvenidos a nuestra tienda de ropa, donde la moda y la calidad se encuentran. Desde nuestros inicios, hemos trabajado para ofrecer prendas únicas que combinan estilo, comodidad y sostenibilidad. Creemos en la importancia de expresar tu personalidad a través de lo que llevas puesto, y por eso diseñamos ropa que se adapta a todas las ocasiones.
-    </p>
-    <p>
-      Nuestro compromiso con el medio ambiente nos impulsa a utilizar materiales responsables y procesos éticos en la fabricación de nuestras prendas. Cada pieza que encuentras aquí es el resultado de un esfuerzo por crear moda que no solo se vea bien, sino que también haga el bien.
-    </p>
-    <p>
-      Gracias por ser parte de nuestra historia. ¡Esperamos que disfrutes vistiendo nuestras creaciones tanto como nosotros disfrutamos haciéndolas para ti!
-    </p>
+  <section class="about-section container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="../img/aboutus-team.jpg" alt="Nuestro equipo Yokai Gear" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h1 class="mb-3 text-accent">Sobre Nosotros</h1>
+        <h4 class="mb-4 fst-italic text-secondary">Moda urbana con propósito y pasión.</h4>
+        <p>
+          En <strong class="nombre-marca">Project commerse</strong> fusionamos la creatividad, la cultura japonesa y el diseño contemporáneo para crear prendas únicas. Desde nuestros inicios, apostamos por la autenticidad, la comodidad y la sustentabilidad.
+        </p>
+        <ul class="list-unstyled mb-4">
+          <li>🟢 <strong>Materiales responsables</strong> y procesos éticos</li>
+          <li>🟢 <strong>Diseño independiente</strong> y original</li>
+          <li>🟢 <strong>Ediciones limitadas</strong> para quienes buscan diferenciarse</li>
+        </ul>
+        <blockquote class="blockquote about-quote">
+          <p class="mb-0">"La moda es una forma de decir quién eres sin tener que hablar."</p>
+          <footer class="blockquote-footer">XOXOXOXO Team</footer>
+        </blockquote>
+      </div>
+    </div>
   </section>
 </main>
 
@@ -94,6 +109,21 @@
     <li><a href="terms.html">Terms</a></li>
   </ul>
 </footer>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="cartOffcanvasLabel">Tu Carrito</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="cart-items-container"></div>
+    <div class="cart-total mt-3">
+      <h5>TOTAL: $<span id="total-price">0.00</span></h5>
+    </div>
+  </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script src="../js/carrito.js"></script>
 </body>
 </html>
